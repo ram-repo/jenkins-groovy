@@ -1,3 +1,4 @@
+def call () {
 pipeline {
     agent { label 'buildtool' }
     parameters {
@@ -18,4 +19,5 @@ pipeline {
             }
         }
     }
+}
 }
