@@ -6,11 +6,9 @@ def call() {
         stages {
             stage('Build') {
                 steps {
-                    script {
-                        com.example.Utils.buildStage()
-                    }
+                    sh "mvn clean package"
                 }
-
+    
                 post {
                     success {
                         junit '**/target/surefire-reports/*.xml'
